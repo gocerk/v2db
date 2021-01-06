@@ -1,0 +1,13 @@
+{
+  "name": "v2db",
+  "version": "0.1.0",
+  "main": "src/index.js",
+  "repository": "https://github.com/v30xy/v2db",
+  "homepage": "https://github.com/v30xy/v2db#readme",
+  "author": "Bedirhan Tuhana <v30xythedev@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^7.17.0",
+    "prettier": "^2.2.1"
+  }
+}
