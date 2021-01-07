@@ -23,7 +23,7 @@ const strings = {
 
 module.exports = (text, language, ...args) => {
   let string = strings[text][language];
-  if (!string) string = strings[text].english;
+  if (!string) string = strings[text].en;
   if (typeof string === 'function') return string(...args);
   else return string;
 };
