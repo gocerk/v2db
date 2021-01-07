@@ -6,7 +6,7 @@ const YamlDB = (options = {}) => {
   const fn = {};
   const opts = {};
 
-  const defaultOptions = { name: 'db', seperator: '.', language: 'en' };
+  const defaultOptions = { seperator: '.', language: 'en' };
   options = Object.assign(defaultOptions, options);
 
   opts.name = options.name;
@@ -43,6 +43,21 @@ const YamlDB = (options = {}) => {
     fs.writeFileSync(`./${opts.name}.yaml`, YAML.stringify(data));
 
     return data;
+  };
+
+  fn.update = (key, func) => {
+    let data = fn.get(key);
+    fn.set(key, func(data));
+    data = fn.get(key);
+
+    return data;
+  };
+
+  fn.add = (key, value) => {
+    let data = fn.get(key);
+    fn.set(key, data + value);
+
+    return fn.get(key);
   };
 
   fn.delAll = () => {

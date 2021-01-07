@@ -4,7 +4,7 @@ const JsonDB = (options = {}) => {
   const fn = {};
   const opts = {};
 
-  const defaultOptions = { name: 'db', seperator: '.' };
+  const defaultOptions = { seperator: '.' };
   options = Object.assign(defaultOptions, options);
 
   opts.name = options.name;
@@ -34,6 +34,20 @@ const JsonDB = (options = {}) => {
     fs.writeFileSync(`./${opts.name}.json`, JSON.stringify(data, null, 2));
 
     return data;
+  };
+
+  fn.update = (key, func) => {
+    let data = fn.get(key);
+    fn.set(key, func(data));
+
+    return fn.get(key);
+  };
+
+  fn.add = (key, value) => {
+    let data = fn.get(key);
+    fn.set(key, data + value);
+
+    return fn.get(key);
   };
 
   fn.delAll = () => {

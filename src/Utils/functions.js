@@ -49,6 +49,26 @@ const Functions = (options = {}) => {
     }
   };
 
+  fn.colorize = (color, ...input) => {
+    switch (color) {
+      case 'red':
+        for (let i = 0; i < input.length; i++)
+          return '\x1b[31m' + input + '\x1b[0m';
+        break;
+      case 'orange':
+        for (let i = 0; i < input.length; i++)
+          return '\x1b[33m' + input + '\x1b[0m';
+        break;
+      case 'green':
+        for (let i = 0; i < input.length; i++)
+          return '\x1b[32m' + input + '\x1b[0m';
+        break;
+      default:
+        for (let i = 0; i < input.length; i++)
+          return '\x1b[32m' + input + '\x1b[0m';
+    }
+  };
+
   fn.isValid = (input) => {
     return ['string', 'number', 'boolean', 'object'].includes(typeof input);
   };
