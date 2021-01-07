@@ -50,8 +50,8 @@ const Index = (options = {}) => {
 
   fn.update = (key, func) => {
     if (!key) throw new TypeError(i18n('keyBlank', options.language));
-    if (!fn) throw new TypeError(i18n('value', options.language));
-    if (typeof fn !== 'function')
+    if (!func) throw new TypeError(i18n('value', options.language));
+    if (typeof func !== 'function')
       throw new TypeError(i18n('valueMustBe', options.language, 'Function'));
 
     return opts.adapter.update(key, func);
@@ -90,22 +90,22 @@ const Index = (options = {}) => {
     return data;
   };
 
-  fn.unpush = (key, ...value) => {
-    if (!key) throw new TypeError(i18n('keyBlank', options.language));
-    if (!value) throw new TypeError(i18n('valueBlank', options.language));
-    if (!fn.has(key)) fn.set(key, []);
+  // fn.unpush = (key, ...value) => {
+  //   if (!key) throw new TypeError(i18n('keyBlank', options.language));
+  //   if (!value) throw new TypeError(i18n('valueBlank', options.language));
+  //   if (!fn.has(key)) fn.set(key, []);
 
-    let data = fn.get(key);
+  //   let data = fn.get(key);
 
-    for (const val of value) {
-      if (typeof val === 'object')
-        data = val.filter((el) => JSON.stringify(el) !== val);
-      data = val.filter((el) => el !== val);
-    }
-    fn.set(key, data);
+  //   for (const val of value) {
+  //     if (typeof val === 'object')
+  //       data = data.filter((el) => JSON.stringify(el) !== val);
+  //     data = data.filter((el) => el !== val);
+  //   }
+  //   fn.set(key, data);
 
-    return data;
-  };
+  //   return data;
+  // };
 
   fn.all = () => {
     return opts.adapter.all();
