@@ -28,7 +28,7 @@ const v2db = require('v2db')({
   name: 'coolDatabase', // default: db
   seperator: '.', // default: .
   language: 'en', // default: en
-  yaml: true, // default: false
+  yaml: false, // default: false
 });
 
 /*
@@ -62,7 +62,7 @@ const v2db = require('v2db')({
   name: 'havalıVeritabanı', // varsayılan: db
   seperator: '.', // varsayılan: .
   language: 'tr', // varsayılan: en
-  yaml: true, // varsayılan: false
+  yaml: false, // varsayılan: false
 });
 
 /*
