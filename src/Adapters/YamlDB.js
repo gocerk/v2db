@@ -22,7 +22,11 @@ const YamlDB = (options = {}) => {
   try {
     YAML = require('yaml');
   } catch (err) {
-    throw new Error('\x1b[31m' + i18n('installYAML', opts.lang) + '\x1b[0m');
+    throw new Error(
+      '\x1b[31m' +
+        opts.utils.colorize('red', i18n('installYAML', opts.lang)) +
+        '\x1b[0m'
+    );
   }
 
   fn.set = (key, value) => {

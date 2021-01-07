@@ -10,3 +10,4 @@ v2db.add('the.number', 50);
 v2db.substract('the.number', 25);
 v2db.update('the.number', (x) => (x = 1234));
 v2db.all();
+// v2db.deleteAll();
