@@ -7,6 +7,9 @@
   "homepage": "https://github.com/v30xy/v2db#readme",
   "author": "Bedirhan Tuhana <v30xythedev@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "node src/Test/test.js"
+  },
   "devDependencies": {
     "eslint": "^7.17.0",
     "prettier": "^2.2.1"
