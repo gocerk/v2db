@@ -5,7 +5,6 @@
   <img src="https://img.shields.io/npm/v/v2db?style=flat-square" />
   <img src="https://img.shields.io/npm/dt/v2db?style=flat-square" />
   <img src="https://img.shields.io/github/license/v30xy/v2db?style=flat-square" />
-  <br />
   <h3>Content Language (İçerik dili)</h3>
   <p><a href="#english">English</a> - <a href="#turkish">Türkçe</a></p>
 </div>
