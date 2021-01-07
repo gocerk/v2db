@@ -36,7 +36,7 @@ const v2db = require('v2db')();
 */
 
 v2db.set('hello.world', 'HELLO!'); // {"hello": {"world": "HELLO!"}}
-v2db.get('hello.world'); // {"world": "HELLO!"}
+v2db.get('hello'); // {"world": "HELLO!"}
 v2db.get('hello.world'); // HELLO!
 ```
 
@@ -69,9 +69,9 @@ YA DA SADECE ŞUNU YAP
 const v2db = require('v2db')();
 */
 
-v2db.set('hello.world', 'HELLO!'); // {"hello": {"world": "HELLO!"}}
-v2db.get('hello.world'); // {"world": "HELLO!"}
-v2db.get('hello.world'); // HELLO!
+v2db.set('merhaba.dunya', 'MERHABA!'); // {"merhaba": {"dunya": "MERHABA!"}}
+v2db.get('merhaba'); // {"dunya": "MERHABA!"}
+v2db.get('merhaba.dunya'); // MERHABA!
 ```
 
 </div>
