@@ -6,10 +6,9 @@ on:
     branches: [main]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v2
-      - name: Test
-        run: yarn test
+  steps:
+    - uses: actions/checkout@v2
+    - name: Test
+      run: yarn test
