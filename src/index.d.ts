@@ -8,7 +8,7 @@ declare function Index(options?: {
   set(key: string, value: any): any;
   get(key: string): any;
   fetch(key: string): any;
-  delete(key: string): any;
+  delete(key: string): boolean;
   has(key: string): void;
   update(key: string, func: any): any;
   add(key: string, value: number): any;

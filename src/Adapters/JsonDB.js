@@ -33,7 +33,7 @@ const JsonDB = (options = {}) => {
     data = opts.utils._del(data, key);
     fs.writeFileSync(`./${opts.name}.json`, JSON.stringify(data, null, 2));
 
-    return data;
+    return true;
   };
 
   fn.update = (key, func) => {

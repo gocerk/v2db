@@ -46,7 +46,7 @@ const YamlDB = (options = {}) => {
     data = opts.utils._del(data, key);
     fs.writeFileSync(`./${opts.name}.yaml`, YAML.stringify(data));
 
-    return data;
+    return true;
   };
 
   fn.update = (key, func) => {
