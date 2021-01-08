@@ -10,13 +10,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Testing...
-        run: yarn test
+        run: |
+          yarn
+          yarn test
   lint:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
       - name: Linting...
-        run: |
-          yarn
-          yarn lint
+        run: yarn lint
