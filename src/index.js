@@ -1,4 +1,4 @@
-const { isValid, colorize, stringify } = require('./Utils/functions')();
+const { isValid, colorize } = require('./Utils/functions')();
 const i18n = require('./Utils/i18n');
 
 const Index = (options = {}) => {
@@ -99,7 +99,9 @@ const Index = (options = {}) => {
 
     for (let val of value)
       data = data.filter((x) =>
-        typeof x === 'object' ? stringify(x) !== stringify(val) : x !== val
+        typeof x === 'object'
+          ? JSON.stringify(x) !== JSON.stringify(val)
+          : x !== val
       );
 
     fn.set(key, data);
