@@ -495,6 +495,11 @@ levn@^0.4.1:
     prelude-ls "^1.2.1"
     type-check "~0.4.0"
 
+like-json@^1.0.32:
+  version "1.0.32"
+  resolved "https://registry.yarnpkg.com/like-json/-/like-json-1.0.32.tgz#59cebfc56566c5598b49da3572248faff5553cb6"
+  integrity sha512-0JKVPB3BvPIB8fgxb4T/ONkWrSKfHGoq8Rshl57wDf6eTUUx4zQlI0wxwoVPitzp71tksTW/tb0CCDlIu+crCw==
+
 lodash@^4.17.19, lodash@^4.17.20:
   version "4.17.20"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"

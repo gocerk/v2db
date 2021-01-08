@@ -52,9 +52,8 @@ const YamlDB = (options = {}) => {
   fn.update = (key, func) => {
     let data = fn.get(key);
     fn.set(key, func(data));
-    data = fn.get(key);
 
-    return data;
+    return fn.get(key);
   };
 
   fn.add = (key, value) => {
@@ -70,8 +69,7 @@ const YamlDB = (options = {}) => {
   };
 
   fn.all = () => {
-    let data = fs.readFileSync(`./${opts.name}.yaml`, 'utf-8');
-    data = YAML.parse(data) === null ? {} : YAML.parse(data);
+    let data = YAML.parse(fs.readFileSync(`./${opts.name}.yaml`, 'utf-8'));
     return data;
   };
 

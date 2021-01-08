@@ -13,10 +13,10 @@
   <h1>English</h1>
   <h2>Installation</h2>
 
-```js
-// NPM
+```bash
+# NPM
 npm install v2db --save
-// YARN
+# YARN
 yarn add v2db
 ```
 
@@ -47,10 +47,10 @@ v2db.get('hello.world'); // HELLO!
 
   <h2>Kurulum</h2>
 
-```js
-// NPM
+```bash
+# NPM
 npm install v2db --save
-// YARN
+# YARN
 yarn add v2db
 ```
 

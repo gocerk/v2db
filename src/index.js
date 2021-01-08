@@ -1,4 +1,4 @@
-const { isValid, colorize } = require('./Utils/functions')();
+const { isValid, colorize, stringify } = require('./Utils/functions')();
 const i18n = require('./Utils/i18n');
 
 const Index = (options = {}) => {
@@ -90,22 +90,22 @@ const Index = (options = {}) => {
     return data;
   };
 
-  // fn.unpush = (key, ...value) => {
-  //   if (!key) throw new TypeError(i18n('keyBlank', options.language));
-  //   if (!value) throw new TypeError(i18n('valueBlank', options.language));
-  //   if (!fn.has(key)) fn.set(key, []);
+  fn.unpush = (key, ...value) => {
+    if (!key) throw new TypeError(i18n('keyBlank', options.language));
+    if (!value) throw new TypeError(i18n('valueBlank', options.language));
+    // if (!fn.has(key)) fn.set(key, []);
 
-  //   let data = fn.get(key);
+    let data = fn.get(key);
 
-  //   for (const val of value) {
-  //     if (typeof val === 'object')
-  //       data = data.filter((el) => JSON.stringify(el) !== val);
-  //     data = data.filter((el) => el !== val);
-  //   }
-  //   fn.set(key, data);
+    for (let val of value)
+      data = data.filter((x) =>
+        typeof x === 'object' ? stringify(x) !== stringify(val) : x !== val
+      );
 
-  //   return data;
-  // };
+    fn.set(key, data);
+
+    return data;
+  };
 
   fn.all = () => {
     return opts.adapter.all();

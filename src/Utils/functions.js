@@ -1,3 +1,5 @@
+const like = require('like-json');
+
 const Functions = (options = {}) => {
   const fn = {};
   const opts = {};
@@ -47,6 +49,10 @@ const Functions = (options = {}) => {
       delete data[path];
       return data;
     }
+  };
+
+  fn.stringify = (input) => {
+    return like.stringify(input);
   };
 
   fn.colorize = (color, ...input) => {
