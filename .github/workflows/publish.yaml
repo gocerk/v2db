@@ -2,7 +2,7 @@ name: Publish
 
 on:
   workflow_dispatch:
-    types: [created]
+    branch: [main]
 
 jobs:
   build:
