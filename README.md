@@ -11,6 +11,7 @@
 
 <div id="english">
   <h1>English</h1>
+  <h3>NOTE: Still under development.</h3>
   <h2>Installation</h2>
 
 ```bash
@@ -44,7 +45,7 @@ v2db.get('hello.world'); // HELLO!
 
 <div id="turkish">
   <h1>Türkçe</h1>
-
+  <h3>NOT: Hâlâ geliştirilme aşamasında.</h3>
   <h2>Kurulum</h2>
 
 ```bash
