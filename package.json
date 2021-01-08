@@ -9,7 +9,7 @@
   "license": "MIT",
   "scripts": {
     "test": "node src/Test/test.js",
-    "lint": "yarn eslint"
+    "lint": "yarn eslint src/**/*.js"
   },
   "devDependencies": {
     "eslint": "^7.17.0",
