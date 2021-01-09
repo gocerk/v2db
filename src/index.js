@@ -80,7 +80,7 @@ const Index = (options = {}) => {
     if (!value) throw new TypeError(i18n('valueBlank', options.language));
     // if (!fn.has(key)) fn.set(key, []);
 
-    const data = fn.get(key);
+    let data = fn.get(key);
 
     value.forEach((val) => {
       data.push(val);
