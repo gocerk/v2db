@@ -1,10 +1,10 @@
 <div align="center">
   <h1>v2db</h1>
-  <img src="https://img.shields.io/github/stars/v30xy/v2db?style=flat-square" />
-  <img src="https://img.shields.io/github/commit-activity/m/v30xy/v2db?style=flat-square" />
-  <img src="https://img.shields.io/npm/v/v2db?style=flat-square" />
-  <img src="https://img.shields.io/npm/dt/v2db?style=flat-square" />
-  <img src="https://img.shields.io/github/license/v30xy/v2db?style=flat-square" />
+  <a href="https://github.com/v30xy/v2db/stargazers"><img src="https://img.shields.io/github/stars/v30xy/v2db?style=flat-square" /></a>
+  <a href="https://github.com/v30xy/v2db/commits/main"><img src="https://img.shields.io/github/commit-activity/m/v30xy/v2db?style=flat-square" /></a>
+  <a href="https://npmjs.com/v2db"><img src="https://img.shields.io/npm/v/v2db?style=flat-square" /></a>
+  <a href="https://npmjs.com/v2db"><img src="https://img.shields.io/npm/dt/v2db?style=flat-square" /></a>
+  <a href="https://github.com/v30xy/v2db/blob/main/LICENSE"><img src="https://img.shields.io/github/license/v30xy/v2db?style=flat-square" /></a>
   <h3>Content Language (İçerik dili)</h3>
   <p><a href="#english">English</a> - <a href="#turkish">Türkçe</a></p>
 </div>
