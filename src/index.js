@@ -84,7 +84,7 @@ const Index = (options = {}) => {
 
     value.forEach((val) => {
       data.push(val);
-    }, data);
+    });
     fn.set(key, data);
 
     return data;
@@ -103,7 +103,7 @@ const Index = (options = {}) => {
           ? JSON.stringify(x) !== JSON.stringify(val)
           : x !== val
       );
-    }, data);
+    });
     fn.set(key, data);
 
     return data;
