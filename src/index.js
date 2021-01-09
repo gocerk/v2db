@@ -78,13 +78,13 @@ const Index = (options = {}) => {
   fn.push = (key, ...value) => {
     if (!key) throw new TypeError(i18n('keyBlank', options.language));
     if (!value) throw new TypeError(i18n('valueBlank', options.language));
-    // if (!fn.has(key)) fn.set(key, []);
+    if (!Array.isArray(fn.get(key))) fn.set(key, []);
 
     let data = fn.get(key);
 
     value.forEach((val) => {
       data.push(val);
-    });
+    }, data);
     fn.set(key, data);
 
     return data;
@@ -93,7 +93,7 @@ const Index = (options = {}) => {
   fn.unpush = (key, ...value) => {
     if (!key) throw new TypeError(i18n('keyBlank', options.language));
     if (!value) throw new TypeError(i18n('valueBlank', options.language));
-    // if (!fn.has(key)) fn.set(key, []);
+    if (!Array.isArray(fn.get(key))) fn.set(key, []);
 
     let data = fn.get(key);
 
@@ -103,7 +103,7 @@ const Index = (options = {}) => {
           ? JSON.stringify(x) !== JSON.stringify(val)
           : x !== val
       );
-    });
+    }, data);
     fn.set(key, data);
 
     return data;
