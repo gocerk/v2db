@@ -45,7 +45,7 @@ const Index = (options = {}) => {
   fn.has = (key) => {
     if (!key) throw new TypeError(i18n('keyBlank', options.language));
 
-    !!fn.get(key);
+    return !!fn.get(key);
   };
 
   fn.update = (key, func) => {
