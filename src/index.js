@@ -78,13 +78,13 @@ const Index = (options = {}) => {
   fn.push = (key, ...value) => {
     if (!key) throw new TypeError(i18n('keyBlank', options.language));
     if (!value) throw new TypeError(i18n('valueBlank', options.language));
-    if (!fn.has(key)) fn.set(key, []);
+    // if (!fn.has(key)) fn.set(key, []);
 
-    let data = fn.get(key);
+    const data = fn.get(key);
 
-    for (const val of value) {
+    value.forEach((val) => {
       data.push(val);
-    }
+    });
     fn.set(key, data);
 
     return data;
@@ -97,13 +97,13 @@ const Index = (options = {}) => {
 
     let data = fn.get(key);
 
-    for (let val of value)
+    value.forEach((val) => {
       data = data.filter((x) =>
         typeof x === 'object'
           ? JSON.stringify(x) !== JSON.stringify(val)
           : x !== val
       );
-
+    });
     fn.set(key, data);
 
     return data;
