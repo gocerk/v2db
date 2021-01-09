@@ -8,7 +8,7 @@
     "semi": "warn",
     "indent": "off",
     "no-extra-semi": "warn",
-    "no-unused-vars": "off",
+    "no-unused-vars": "warn",
     "eol-last": "warn"
   }
 }

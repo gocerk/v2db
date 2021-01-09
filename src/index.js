@@ -1,4 +1,4 @@
-const { isValid, colorize } = require('./Utils/functions')();
+const { colorize } = require('./Utils/functions')();
 const i18n = require('./Utils/i18n');
 
 const Index = (options = {}) => {
