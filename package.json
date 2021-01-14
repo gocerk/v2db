@@ -1,6 +1,6 @@
 {
   "name": "v2db",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Fast and simple database handler for NodeJS.",
   "main": "src/index.js",
   "types": "src/index.d.ts",
