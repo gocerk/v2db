@@ -1,9 +1,9 @@
 export = Index;
 declare function Index(options?: {
-  name: string;
-  seperator: '.' | '-' | '_' | ',';
-  language: 'en' | 'tr';
-  yaml: boolean;
+  name?: string;
+  seperator?: '.' | '-' | '_' | ',';
+  language?: 'en' | 'tr';
+  yaml?: boolean;
 }): {
   set(key: string, value: any): any;
   get(key: string): any;
