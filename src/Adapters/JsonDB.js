@@ -12,7 +12,7 @@ const JsonDB = (options = {}) => {
 
   if (
     !fs.existsSync(`./${opts.name}.json`) ||
-    fs.readFileSync(`./${opts.name}.json`).toString() === ''
+    fs.readFileSync(`./${opts.name}.json`, 'utf-8') === ''
   )
     fs.writeFileSync(`./${opts.name}.json`, '{}');
 

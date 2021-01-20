@@ -15,7 +15,7 @@ const YamlDB = (options = {}) => {
 
   if (
     !fs.existsSync(`./${opts.name}.yaml`) ||
-    fs.readFileSync(`./${opts.name}.yaml`).toString() === ''
+    fs.readFileSync(`./${opts.name}.yaml`, 'utf-8') === ''
   )
     fs.writeFileSync(`./${opts.name}.yaml`, '');
 
