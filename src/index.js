@@ -44,7 +44,8 @@ const Index = (options = {}) => {
    */
   fn.set = (key, value) => {
     if (!key) throw new TypeError(i18n('keyBlank', options.language));
-    if (!value) throw new TypeError(i18n('valueBlank', options.language));
+    if (typeof value === 'undefined')
+      throw new TypeError(i18n('valueBlank', options.language));
 
     return opts.adapter.set(key, value);
   };
@@ -120,7 +121,8 @@ const Index = (options = {}) => {
    */
   fn.add = (key, value) => {
     if (!key) throw new TypeError(i18n('keyBlank', options.language));
-    if (!value) throw new TypeError(i18n('valueBlank', options.language));
+    if (typeof value === 'undefined')
+      throw new TypeError(i18n('valueBlank', options.language));
     if (typeof value !== 'number')
       throw new TypeError(i18n('valueMustBe', options.language, 'Number'));
 
@@ -136,7 +138,8 @@ const Index = (options = {}) => {
    */
   fn.substract = (key, value) => {
     if (!key) throw new TypeError(i18n('keyBlank', options.language));
-    if (!value) throw new TypeError(i18n('valueBlank', options.language));
+    if (typeof value === 'undefined')
+      throw new TypeError(i18n('valueBlank', options.language));
     if (typeof value !== 'number')
       throw new TypeError(i18n('valueMustBe', options.language, 'Number'));
 
