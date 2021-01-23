@@ -41,6 +41,8 @@ v2db.get('hello'); // {"world": "HELLO!"}
 v2db.get('hello.world'); // HELLO!
 ```
 
+  <h3>For documentation <a href="DOCUMENTATION.md">go here.</a></h3>
+
 </div>
 
 <div id="turkish">
@@ -74,5 +76,7 @@ v2db.set('merhaba.dunya', 'MERHABA!'); // {"merhaba": {"dunya": "MERHABA!"}}
 v2db.get('merhaba'); // {"dunya": "MERHABA!"}
 v2db.get('merhaba.dunya'); // MERHABA!
 ```
+
+  <h3>Dökümantasyon için <a href="DOCUMENTATION.md">buraya gidiniz.</a></h3>
 
 </div>
