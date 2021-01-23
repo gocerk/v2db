@@ -1,4 +1,4 @@
-const v2db = require('../index')({});
+const v2db = require('../index')();
 v2db.set('hello.world', 'test');
 v2db.set('the.number', 100);
 v2db.get('hello');
