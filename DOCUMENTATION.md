@@ -86,7 +86,7 @@ v2db.get('hello.world.message');
 
 #### fn.fetch()
 
-Clone of [v2db#get](v2db#get)
+Clone of [v2db#get](#Index..fn.fetch)
 
 **Kind**: static method of [<code>fn</code>](#Index..fn)  
 **Example**

@@ -63,7 +63,7 @@ const Index = (options = {}) => {
   };
 
   /**
-   * @description Clone of {@link v2db#get}
+   * @description Clone of {@link #Index..fn.fetch}
    * @example v2db.fetch('hello.world.message');
    */
   fn.fetch = (key) => {
