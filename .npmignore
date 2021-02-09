@@ -1,1 +1,4 @@
 .github
+.gitignore
+.eslintrc
+DOCUMENTATION.md
