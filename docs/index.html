@@ -1,0 +1,165 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>v2db</title>
+	<meta name="description" content="Documentation for v2db">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script async src="assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">v2db</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<h1>v2db</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<div align="center">
+					<h1>v2db</h1>
+					<a href="https://github.com/v30xy/v2db/stargazers"><img src="https://img.shields.io/github/stars/v30xy/v2db?style=flat-square" /></a>
+					<a href="https://github.com/v30xy/v2db/commits/main"><img src="https://img.shields.io/github/commit-activity/m/v30xy/v2db?style=flat-square" /></a>
+					<a href="https://npmjs.com/v2db"><img src="https://img.shields.io/npm/v/v2db?style=flat-square" /></a>
+					<a href="https://npmjs.com/v2db"><img src="https://img.shields.io/npm/dt/v2db?style=flat-square" /></a>
+					<a href="https://github.com/v30xy/v2db/blob/main/LICENSE"><img src="https://img.shields.io/github/license/v30xy/v2db?style=flat-square" /></a>
+					<h3>Content Language (İçerik dili)</h3>
+					<p><a href="#english">English</a> - <a href="#turkish">Türkçe</a></p>
+				</div>
+				<div id="english">
+					<h1>English</h1>
+					<h3>NOTE: Still under development.</h3>
+					<h2>Installation</h2>
+					<pre><code class="language-bash"><span style="color: #008000"># NPM</span>
+<span style="color: #000000">npm install v2db --save</span>
+<span style="color: #008000"># YARN</span>
+<span style="color: #000000">yarn add v2db</span>
+</code></pre>
+					<h2>Usage</h2>
+					<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">v2db</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;v2db&#039;</span><span style="color: #000000">)({</span>
+<span style="color: #000000">  </span><span style="color: #001080">name:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;coolDatabase&#039;</span><span style="color: #000000">, </span><span style="color: #008000">// default: db</span>
+<span style="color: #000000">  </span><span style="color: #001080">seperator:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;.&#039;</span><span style="color: #000000">, </span><span style="color: #008000">// default: .</span>
+<span style="color: #000000">  </span><span style="color: #001080">language:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;en&#039;</span><span style="color: #000000">, </span><span style="color: #008000">// default: en</span>
+<span style="color: #000000">  </span><span style="color: #001080">yaml:</span><span style="color: #000000"> </span><span style="color: #0000FF">false</span><span style="color: #000000">, </span><span style="color: #008000">// default: false</span>
+<span style="color: #000000">});</span>
+
+<span style="color: #008000">/*</span>
+<span style="color: #008000">OR JUST DO THIS</span>
+<span style="color: #008000">const v2db = require(&#039;v2db&#039;)();</span>
+<span style="color: #008000">*/</span>
+
+<span style="color: #001080">v2db</span><span style="color: #000000">.</span><span style="color: #795E26">set</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;hello.world&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;HELLO!&#039;</span><span style="color: #000000">); </span><span style="color: #008000">// {&quot;hello&quot;: {&quot;world&quot;: &quot;HELLO!&quot;}}</span>
+<span style="color: #001080">v2db</span><span style="color: #000000">.</span><span style="color: #795E26">get</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;hello&#039;</span><span style="color: #000000">); </span><span style="color: #008000">// {&quot;world&quot;: &quot;HELLO!&quot;}</span>
+<span style="color: #001080">v2db</span><span style="color: #000000">.</span><span style="color: #795E26">get</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;hello.world&#039;</span><span style="color: #000000">); </span><span style="color: #008000">// HELLO!</span>
+</code></pre>
+					<h3>For documentation <a href="DOCUMENTATION.md">go here.</a></h3>
+				</div>
+				<div id="turkish">
+					<h1>Türkçe</h1>
+					<h3>NOT: Hâlâ geliştirilme aşamasında.</h3>
+					<h2>Kurulum</h2>
+					<pre><code class="language-bash"><span style="color: #008000"># NPM</span>
+<span style="color: #000000">npm install v2db --save</span>
+<span style="color: #008000"># YARN</span>
+<span style="color: #000000">yarn add v2db</span>
+</code></pre>
+					<h2>Kullanım</h2>
+					<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">v2db</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;v2db&#039;</span><span style="color: #000000">)({</span>
+<span style="color: #000000">  </span><span style="color: #001080">name:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;havalıVeritabanı&#039;</span><span style="color: #000000">, </span><span style="color: #008000">// varsayılan: db</span>
+<span style="color: #000000">  </span><span style="color: #001080">seperator:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;.&#039;</span><span style="color: #000000">, </span><span style="color: #008000">// varsayılan: .</span>
+<span style="color: #000000">  </span><span style="color: #001080">language:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;tr&#039;</span><span style="color: #000000">, </span><span style="color: #008000">// varsayılan: en</span>
+<span style="color: #000000">  </span><span style="color: #001080">yaml:</span><span style="color: #000000"> </span><span style="color: #0000FF">false</span><span style="color: #000000">, </span><span style="color: #008000">// varsayılan: false</span>
+<span style="color: #000000">});</span>
+
+<span style="color: #008000">/*</span>
+<span style="color: #008000">YA DA SADECE ŞUNU YAP</span>
+<span style="color: #008000">const v2db = require(&#039;v2db&#039;)();</span>
+<span style="color: #008000">*/</span>
+
+<span style="color: #001080">v2db</span><span style="color: #000000">.</span><span style="color: #795E26">set</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;merhaba.dunya&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;MERHABA!&#039;</span><span style="color: #000000">); </span><span style="color: #008000">// {&quot;merhaba&quot;: {&quot;dunya&quot;: &quot;MERHABA!&quot;}}</span>
+<span style="color: #001080">v2db</span><span style="color: #000000">.</span><span style="color: #795E26">get</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;merhaba&#039;</span><span style="color: #000000">); </span><span style="color: #008000">// {&quot;dunya&quot;: &quot;MERHABA!&quot;}</span>
+<span style="color: #001080">v2db</span><span style="color: #000000">.</span><span style="color: #795E26">get</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;merhaba.dunya&#039;</span><span style="color: #000000">); </span><span style="color: #008000">// MERHABA!</span>
+</code></pre>
+					<h3>Dökümantasyon için <a href="DOCUMENTATION.md">buraya gidiniz.</a></h3>
+				</div>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="modules.html">Exports</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-class">
+						<a href="classes/v2db.html" class="tsd-kind-icon">v2db</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
