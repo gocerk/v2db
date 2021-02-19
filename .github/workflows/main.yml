@@ -10,12 +10,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Building...
-      - run: yarn build
-
-  test:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-      - name: Testing...
-      - run: yarn test
+        run:
+          - yarn build
+          - yarn build:docs
