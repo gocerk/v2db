@@ -11,6 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Building...
-        run:
-          - yarn build
-          - yarn build:docs
+        run: |
+          yarn build
+          yarn build:docs
