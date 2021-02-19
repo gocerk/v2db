@@ -1,7 +1,7 @@
 import JsonDB, { IFuntions } from './Adapters/JsonDB';
 import i18n from './i18n';
 
-export class v2db {
+export = class v2db {
   options: { name?: string, seperator?: string, language?: 'en' | 'tr'; };
   private adapter: IFuntions;
 

@@ -14,10 +14,9 @@
     "tsconfig.json"
   ],
   "scripts": {
-    "test": "ts-node src/Test/test.ts",
     "build": "tsc",
     "build:docs": "typedoc",
-    "prepublishOnly": "tsc"
+    "prepare": "tsc && typedoc"
   },
   "devDependencies": {
     "@types/node": "^14.14.30",
