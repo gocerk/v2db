@@ -4,19 +4,18 @@ on:
     branches: [main]
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Building...
+      - run: yarn build
+
   test:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
       - name: Testing...
-        run: yarn test
-  lint:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-      - name: Linting...
-        run: |
-          yarn
-          yarn lint
+      - run: yarn test

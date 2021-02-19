@@ -1,8 +1,13 @@
 {
   "include": ["src/**/*"],
   "compilerOptions": {
-    "allowJs": true,
+    "esModuleInterop": true,
     "declaration": true,
-    "emitDeclarationOnly": true
+    "lib": ["ES2016"],
+    "outDir": "lib"
+  },
+  "typedocOptions": {
+    "entryPoints": ["./src/index.ts"],
+    "excludePrivate": true
   }
 }
