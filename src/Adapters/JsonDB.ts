@@ -1,7 +1,7 @@
 import fs from 'fs';
 import functions from '../functions';
 
-export interface IFuntions { set: any; get: (key: string) => any; del: (key: string) => boolean; update: (key: string, func: (x: unknown) => void) => any; add: (key: string, value: number) => any; delAll: () => boolean; all: () => any; }
+export interface IFuntions { set: (key: string, value: unknown) => any; get: (key: string) => any; del: (key: string) => boolean; update: (key: string, func: (x: unknown) => void) => any; add: (key: string, value: number) => any; delAll: () => boolean; all: () => any; }
 
 export default (options: { seperator?: string, name?: string; }) => {
   const defaultOpts = { seperator: '.', name: 'db' };

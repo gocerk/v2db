@@ -1,8 +1,11 @@
 import JsonDB, { IFuntions } from './Adapters/JsonDB';
 import i18n from './i18n';
 
-export = class v2db {
+export default class v2db {
   options: { name?: string, seperator?: string, language?: 'en' | 'tr'; };
+  /**
+   * @private
+   */
   private adapter: IFuntions;
 
   /**
@@ -20,7 +23,7 @@ export = class v2db {
    * @param key Target key
    * @param value Value
    */
-  set(key: string, value: any) {
+  set(key: string, value: any): string {
     if (!key) throw new TypeError(i18n('keyBlank', this.options.language));
     if (typeof value === 'undefined')
       throw new TypeError(i18n('valueBlank', this.options.language));
@@ -32,7 +35,7 @@ export = class v2db {
    * Gets current data from target.
    * @param key Target get
    */
-  get(key: string) {
+  get(key: string): string {
     if (!key) throw new TypeError(i18n('keyBlank', this.options.language));
     return this.adapter.get(key);
   };
@@ -42,7 +45,7 @@ export = class v2db {
    * @deprecated Use v2db#get instead.
    * @param key Target key
    */
-  fetch(key: string) {
+  fetch(key: string): string {
     console.log(i18n('useGetInsteadFetch', this.options.language));
     if (!key) throw new TypeError(i18n('keyBlank', this.options.language));
     return this.get(key);
@@ -52,7 +55,7 @@ export = class v2db {
    * Deletes key from target.
    * @param key Target key
    */
-  delete(key: string) {
+  delete(key: string): boolean {
     if (!key) throw new TypeError(i18n('keyBlank', this.options.language));
     return this.adapter.del(key);
   };
@@ -61,7 +64,7 @@ export = class v2db {
    * Checks key in target
    * @param key Target key
    */
-  has(key: string) {
+  has(key: string): boolean {
     if (!key) throw new TypeError(i18n('keyBlank', this.options.language));
     return !!this.get(key);
   };
@@ -71,7 +74,7 @@ export = class v2db {
    * @param key Target key
    * @param func Function
    */
-  update(key: string, func: (x: string) => void) {
+  update(key: string, func: (x: string) => void): string {
     if (!key) throw new TypeError(i18n('keyBlank', this.options.language));
     if (!func) throw new TypeError(i18n('value', this.options.language));
     if (typeof func !== 'function')
@@ -85,7 +88,7 @@ export = class v2db {
    * @param key Target key
    * @param value Number to add
    */
-  add(key: string, value: number) {
+  add(key: string, value: number): string {
     if (!key) throw new TypeError(i18n('keyBlank', this.options.language));
     if (typeof value === 'undefined')
       throw new TypeError(i18n('valueBlank', this.options.language));
@@ -100,7 +103,7 @@ export = class v2db {
    * @param key Target key
    * @param value Number to substract
    */
-  subtracts(key: string, value: number) {
+  subtract(key: string, value: number): string {
     if (!key) throw new TypeError(i18n('keyBlank', this.options.language));
     if (typeof value === 'undefined')
       throw new TypeError(i18n('valueBlank', this.options.language));
@@ -115,12 +118,12 @@ export = class v2db {
    * @param key Target key
    * @param value Value to push
    */
-  push(key: string, ...value: any[]) {
+  push(key: string, ...value: any[]): any {
     if (!key) throw new TypeError(i18n('keyBlank', this.options.language));
     if (!value) throw new TypeError(i18n('valueBlank', this.options.language));
     if (!Array.isArray(this.get(key))) this.set(key, []);
 
-    let data = this.get(key);
+    let data = this.get(key) as any;
 
     value.forEach((val) => {
       data.push(val);
@@ -135,12 +138,12 @@ export = class v2db {
    * @param key Target key
    * @param value Value to unpush
    */
-  unpush(key: string, ...value: any[]) {
+  unpush(key: string, ...value: any[]): any {
     if (!key) throw new TypeError(i18n('keyBlank', this.options.language));
     if (!value) throw new TypeError(i18n('valueBlank', this.options.language));
     if (!Array.isArray(this.get(key))) this.set(key, []);
 
-    let data = this.get(key);
+    let data = this.get(key) as any;
 
     value.forEach((val) => {
       data = data.filter((x: string) =>
@@ -157,14 +160,14 @@ export = class v2db {
   /**
    * Returns file content.
    */
-  all() {
+  all(): any {
     return this.adapter.all();
   };
 
   /**
    * Deletes file content.
    */
-  delAll() {
+  delAll(): boolean {
     return this.adapter.delAll();
   }
 }
