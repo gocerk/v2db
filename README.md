@@ -5,7 +5,8 @@
   <a href="https://npmjs.com/v2db"><img src="https://img.shields.io/npm/v/v2db?style=flat-square" /></a>
   <a href="https://npmjs.com/v2db"><img src="https://img.shields.io/npm/dt/v2db?style=flat-square" /></a>
   <a href="https://github.com/v30xy/v2db/blob/main/LICENSE"><img src="https://img.shields.io/github/license/v30xy/v2db?style=flat-square" /></a>
-  <h2><a href="https://v30xy.github.io/v2db">Documentation</a></h2>
+  <p><a href="https://v30xy.github.io/v2db">Documentation</a></p>
+  <p><a href="CHANGELOG.md">Changelog</a></p>
 </div>
 
 ## Installation
