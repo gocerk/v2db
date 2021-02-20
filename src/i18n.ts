@@ -1,8 +1,4 @@
-const strings = {
-  installYAML: {
-    tr: "YamlDB kullanmak için 'yaml' modülünü kurmalısınız.",
-    en: "To use YamlDB, you must install the 'yaml' module.",
-  },
+const msg = {
   keyBlank: {
     tr: 'Bir anahtar girilmedi',
     en: 'No key entered.',
@@ -16,16 +12,16 @@ const strings = {
     en: "Use 'v2db#get' instead of 'v2db#fetch'.",
   },
   valueMustBe: {
-    tr: (x) => `Değer ${x} olmalı.`,
-    en: (x) => `Value must be ${x}.`,
+    tr: (x: string) => `Değer ${x} olmalı.`,
+    en: (x: string) => `Value must be ${x}.`,
   },
 };
 
-module.exports = (text, language, ...args) => {
+export const strings = msg;
+
+export default (text: string, language: 'tr' | 'en', ...args: string[]) => {
   let string = strings[text][language];
   if (!string) string = strings[text].en;
   if (typeof string === 'function') return string(...args);
   else return string;
 };
-
-module.exports.strings = strings;

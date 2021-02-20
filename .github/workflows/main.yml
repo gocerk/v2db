@@ -1,22 +1,15 @@
-name: Test & Lint
+name: Build
+
 on:
   push:
-    branches: [main]
+    branches: [typescript]
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
-      - name: Testing...
-        run: yarn test
-  lint:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-      - name: Linting...
+      - name: Building...
         run: |
           yarn
-          yarn lint

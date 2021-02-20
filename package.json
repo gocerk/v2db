@@ -1,18 +1,26 @@
 {
   "name": "v2db",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Fast and simple database handler for NodeJS.",
-  "main": "src/index.js",
-  "types": "src/index.d.ts",
+  "main": "lib/index.js",
+  "mainDev": "src/index.ts",
+  "types": "lib/index.d.ts",
   "repository": "https://github.com/v30xy/v2db",
   "homepage": "https://github.com/v30xy/v2db#readme",
   "author": "Bedirhan Tuhana <v30xythedev@gmail.com>",
   "license": "MIT",
+  "files": [
+    "lib/**/*",
+    "tsconfig.json"
+  ],
   "scripts": {
-    "test": "node src/Test/test.js",
-    "lint": "yarn eslint src/**/*.js"
+    "build": "tsc",
+    "build:docs": "typedoc",
+    "prepare": "tsc && typedoc"
   },
   "devDependencies": {
-    "eslint": "^7.19.0"
+    "@types/node": "^14.14.30",
+    "typedoc": "^0.20.25",
+    "typescript": "^4.1.5"
   }
 }
