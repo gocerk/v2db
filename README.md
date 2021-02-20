@@ -25,7 +25,7 @@ const db = new v2db({
   language: 'en' // default: en
 });
 
-v2db.set('hello.world', 'HELLO!'); // {"hello": {"world": "HELLO!"}}
-v2db.get('hello'); // {"world": "HELLO!"}
-v2db.get('hello.world'); // HELLO!
+db.set('hello.world', 'HELLO!'); // {"hello": {"world": "HELLO!"}}
+db.get('hello'); // {"world": "HELLO!"}
+db.get('hello.world'); // HELLO!
 ```
