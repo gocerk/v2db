@@ -18,7 +18,7 @@ yarn add v2db
 ## Usage
 
 ```js
-const v2db = require('v2db');
+const {v2db} = require('v2db');
 const db = new v2db({
   name: 'myDatabase', // default: db
   seperator: '.', // default: .

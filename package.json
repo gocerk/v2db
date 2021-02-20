@@ -16,8 +16,7 @@
   "scripts": {
     "build": "tsc",
     "build:docs": "typedoc",
-    "prepare": "tsc && typedoc",
-    "postinstall": "echo Thank you for using v2db. If you\\'re used module before and updating, please check https://github.com/v30xy/v2db."
+    "prepare": "tsc && typedoc"
   },
   "devDependencies": {
     "@types/node": "^14.14.30",
