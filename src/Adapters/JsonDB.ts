@@ -38,7 +38,7 @@ export default (options: { seperator?: string, name?: string; }) => {
       return true;
     },
 
-    update: (key: string, func: (x: unknown) => void) => {
+    update: (key: string, func: (x: any) => void) => {
       let data = fn.get(key);
       data = fn.set(key, func(data));
 
