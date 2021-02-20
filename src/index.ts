@@ -1,7 +1,10 @@
 import JsonDB, { IFuntions } from './Adapters/JsonDB';
 import i18n from './i18n';
 
-export default class v2db {
+export class v2db {
+  /**
+   * @default { name: 'db', seperator: '.', language: 'en' }
+   */
   options: { name?: string, seperator?: string, language?: 'en' | 'tr'; };
   /**
    * @private
@@ -42,7 +45,7 @@ export default class v2db {
 
   /**
    * Clone of {@link v2db.get}
-   * @deprecated Use v2db#get instead.
+   * @deprecated Use v2db.get instead.
    * @param key Target key
    */
   fetch(key: string): string {
